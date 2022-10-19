@@ -13,20 +13,45 @@ class DemoBackdropFilterScreen extends StatefulWidget {
 }
 
 class _DemoBackdropFilterScreenState extends State<DemoBackdropFilterScreen> {
+  final _iconSize = 30.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Backdrop filter'),
       ),
-      body: SingleChildScrollView(
+      body: Container(
+        width: MediaQuery.of(context).size.width,
         child: Column(
           children: [
-            Image.asset(
-                'assets/images/september_by_alartriss_df7w6y0-fullview.jpeg'),
-            CustomIconWidget(),
-            Image.asset(
-                'assets/images/september_by_alartriss_df7w6y0-fullview.jpeg'),
+            SizedBox(height: 24,),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(top: 1, left: 1),
+                  child: SizedBox(
+                    height: _iconSize,
+                    width: _iconSize,
+                    child: ImageFiltered(
+                      imageFilter: ImageFilter.blur(
+                          sigmaY: 1, sigmaX: 1, tileMode: TileMode.decal),
+                      child: SvgPicture.asset(
+                        'assets/svgs/sc_ic_heart_fill.svg',
+                        height: _iconSize,
+                        width: _iconSize,
+                        color: Colors.black.withOpacity(0.5),
+                      ),
+                    ),
+                  ),
+                ),
+                SvgPicture.asset(
+                  'assets/svgs/sc_ic_heart_fill.svg',
+                  height: _iconSize,
+                  width: _iconSize,
+                )
+              ],
+            ),
           ],
         ),
       ),
