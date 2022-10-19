@@ -1,5 +1,6 @@
 import 'package:app_demo/app/presentation/screen/demo_animated_list.dart';
 import 'package:app_demo/app/presentation/screen/demo_audio_player.dart';
+import 'package:app_demo/app/presentation/screen/demo_backdrop_filter.dart';
 import 'package:app_demo/app/presentation/screen/rive_animation/demo_rive_animation.dart';
 import 'package:app_demo/app/presentation/screen/rive_animation/demo_rive_animation_two.dart';
 import 'package:app_demo/app/presentation/screen/rive_animation/demo_rive_multi_animation.dart';
@@ -12,6 +13,7 @@ import 'package:flutter/material.dart';
 
 class AppRoutes {
   static const String audioPlayer = '/audio-player';
+  static const String backdropFilter = '/backdrop-filter';
   static const String animatedList = '/animated-list';
   static const String riveOneShotAnimation = '/rive-one-shot-animation';
   static const String riveOneShotAnimationTwo = '/rive-animation-two';
@@ -45,11 +47,14 @@ class AppRoutes {
       return MaterialPageRoute(builder: (_) => const StateDemo());
     }
 
-    if (path.contains(videoTrimmerDemo)) {
-      return MaterialPageRoute(builder: (_) => DemoVideoTrimmer());
-    }
+    // if (path.contains(videoTrimmerDemo)) {
+    //   return MaterialPageRoute(builder: (_) => DemoVideoTrimmer());
+    // }
     if (path.contains(riveMultiAnimations)) {
       return MaterialPageRoute(builder: (_) => MultiAnimationsWidget());
+    }
+    if (path.contains(backdropFilter)) {
+      return MaterialPageRoute(builder: (_) => DemoBackdropFilterScreen());
     }
 
     return MaterialPageRoute(builder: (_) => const UnknownScreen());

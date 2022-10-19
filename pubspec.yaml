@@ -37,7 +37,7 @@ dependencies:
   assets_audio_player: ^3.0.5
   flutter_neumorphic: ^3.2.0
   rive: ^0.9.0
-  flutter_svg: ^0.23.0+1
+  flutter_svg: ^1.1.5
   video_trimmer: ^1.1.3
   image_picker: ^0.8.5+3
 
@@ -68,6 +68,7 @@ flutter:
     - assets/audios/
     - assets/animation/
     - assets/svgs/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
