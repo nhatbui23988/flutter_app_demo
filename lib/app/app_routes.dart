@@ -1,6 +1,8 @@
 import 'package:app_demo/app/presentation/screen/demo_animated_list.dart';
 import 'package:app_demo/app/presentation/screen/demo_audio_player.dart';
-import 'package:app_demo/app/presentation/screen/demo_backdrop_filter.dart';
+import 'package:app_demo/app/presentation/screen/fake_shadow/demo_backdrop_filter.dart';
+import 'package:app_demo/app/presentation/screen/flip_animation/flip_animation_screen.dart';
+import 'package:app_demo/app/presentation/screen/preview_url_screen.dart';
 import 'package:app_demo/app/presentation/screen/rive_animation/demo_rive_animation.dart';
 import 'package:app_demo/app/presentation/screen/rive_animation/demo_rive_animation_two.dart';
 import 'package:app_demo/app/presentation/screen/rive_animation/demo_rive_multi_animation.dart';
@@ -21,6 +23,8 @@ class AppRoutes {
   static const String rivePlayPauseAnimation = '/rive-play-pause-animation';
   static const String stateDemo = '/state-demo';
   static const String videoTrimmerDemo = '/video-trimmer';
+  static const String previewUrl = '/preview-url';
+  static const String flipAnimation = '/flip-animation';
 
   static PageRoute onGenerateRoute(RouteSettings routeSettings) {
     String routeName = routeSettings.name ?? '/unknown';
@@ -43,7 +47,8 @@ class AppRoutes {
 
     if (path.contains(rivePlayPauseAnimation)) {
       return MaterialPageRoute(builder: (_) => const PlayPauseAnimation());
-    } if (path.contains(stateDemo)) {
+    }
+    if (path.contains(stateDemo)) {
       return MaterialPageRoute(builder: (_) => const StateDemo());
     }
 
@@ -55,6 +60,12 @@ class AppRoutes {
     }
     if (path.contains(backdropFilter)) {
       return MaterialPageRoute(builder: (_) => DemoBackdropFilterScreen());
+    }
+    if (path.contains(previewUrl)) {
+      return MaterialPageRoute(builder: (_) => PreviewUrlScreen());
+    }
+    if (path.contains(flipAnimation)) {
+      return MaterialPageRoute(builder: (_) => FlipAnimationScreen());
     }
 
     return MaterialPageRoute(builder: (_) => const UnknownScreen());

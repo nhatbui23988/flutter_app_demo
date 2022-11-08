@@ -25,7 +25,7 @@ class _StateDemoState extends State<StateDemo> {
             child: OutlinedButton(
               onPressed: (){
                 setState(() {
-                  count++;
+                  // count++;
                 });
               },
               child: Text('Rebuild'),

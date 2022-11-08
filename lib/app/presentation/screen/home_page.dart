@@ -20,7 +20,9 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _buildButtonNavigate(context, 'Backdrop Filter', AppRoutes.audioPlayer),
-            // _buildButtonNavigate(context, 'Asset Audio Player', AppRoutes.audioPlayer),
+            _buildButtonNavigate(context, 'Preview Url', AppRoutes.previewUrl),
+            _buildButtonNavigate(context, 'Flip Animation', AppRoutes.flipAnimation),
+            _buildButtonNavigate(context, 'State demo', AppRoutes.stateDemo),
             // _buildButtonNavigate(context, 'Multi List Animation', AppRoutes.riveMultiAnimations),
             // _buildButtonNavigate(context, 'Animated List', AppRoutes.animatedList),
             // _buildButtonNavigate(context, 'Rive one shot animation', AppRoutes.riveOneShotAnimation),
