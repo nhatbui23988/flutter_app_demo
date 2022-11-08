@@ -98,7 +98,6 @@ class _SimpleStatefulWidgetState extends State<SimpleStatefulWidget> {
               // });
             }, child: const Text('Increment')),
             OutlinedButton(onPressed: (){
-             context.getElementForInheritedWidgetOfExactType<StateDemo>();
             }, child: const Text('Do something'))
           ],
         ),
